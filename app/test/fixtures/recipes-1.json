@@ -1,0 +1,34 @@
+[
+  {
+    "rec_id" : "lemonchicken",
+    "name" : "Lemon Chicken",
+    "cookingTime": "30 mins",
+    "ingredients": [
+      {
+        "name": "Lemon",
+        "quantity": "1"
+      },
+      {
+        "name": "Chicken",
+        "quantity": "1"
+      }
+    ],
+    "image": "images/lemon-chicken.jpg"
+  },
+  {
+    "rec_id" : "beefstroganoff",
+    "name" : "Beef Stroganoff",
+    "cookingTime": "60 mins",
+    "ingredients": [
+      {
+        "name": "Beef",
+        "quantity": "1"
+      },
+      {
+        "name": "Mushrooms",
+        "quantity": "400g"
+      }
+    ],
+    "image": "images/beef-stroganoff.jpg"
+  }
+]

@@ -1,0 +1,44 @@
+<!-- homepage partial - contains the 'core' list of recipes in tabular format -->
+<section class="recipes" ng-controller="recipeListCtrl">
+
+  <h2 class="centered">Current Recipes</h2>
+
+  <div class="content-block">
+    <!-- Message to be shown should there be no recipes -->
+    <p class="no-results ng-hide" ng-show="recipes.length === 0">
+      Sorry, we currently have no recipes for you
+    </p>
+
+    <!-- Show recipes unless there are none -->
+    <div class="ng-hide" ng-show="recipes.length > 0">
+
+        <!-- Filter input - allows for fast searching on any field -->
+        <label class="recipe-list-filter" for="recipe-filter">
+          Filter: <input id="recipe-filter" type="text" ng-model="search" />
+        </label>
+
+        <table class="pure-table recipe-table" >
+          <thead>
+            <tr>
+              <th>Name</th><th>Cooking Time</th><th>Main Ingredients</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="recipe in recipes | filter:search">
+              <td>
+                <a href="#/recipe/{{recipe.rec_id}}">{{recipe.name}}</a>
+              </td>
+              <td>
+                {{recipe.cookingTime}}
+              </td>
+              <td>
+                <span ng-repeat="ingredient in recipe.ingredients">
+                  {{ingredient.name}}<span ng:hide="(recipe.ingredients.length-$index-1)==0">,</span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</section>

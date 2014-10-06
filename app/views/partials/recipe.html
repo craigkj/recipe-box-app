@@ -1,0 +1,26 @@
+<div class="recipe" ng-controller="recipeCtrl">
+
+  <div class="content-block">
+    <p class="ng-hide no-results" ng-show="!currentRecipe.rec_id">This recipe does not exist or has been removed.</p>
+
+    <div class="ng-hide" ng-show="currentRecipe.rec_id">
+
+      <div class="recipe-image">
+        <img alt="{{ currentRecipe.name }}" src="/{{currentRecipe.image}}" />
+      </div>
+
+      <h2>{{ currentRecipe.name }}</h2>
+
+      <dl>
+        <dt>Cooking Time:</dt>
+        <dd>{{ currentRecipe.cookingTime }}</dd>
+      </dl>
+
+      <h3>Ingredients</h3>
+      <dl>
+        <dt ng-repeat-start="ingredient in currentRecipe.ingredients">{{ingredient.name}}:</dt>
+        <dd ng-repeat-end>{{ingredient.quantity}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

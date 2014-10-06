@@ -1,0 +1,26 @@
+{
+  "name": "recipebox",
+  "version": "0.0.0",
+  "authors": [
+    "craigkj <craig.jones01@bbc.co.uk>"
+  ],
+  "keywords": [
+    "recipe",
+    "recipes"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.5.0",
+    "angular-mocks": "~1.2.19",
+    "angular": "~1.2.26"
+  }
+}
